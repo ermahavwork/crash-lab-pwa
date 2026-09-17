@@ -1,0 +1,14 @@
+node_modules/
+dist/
+dev-dist/
+.vite/
+*.log
+.DS_Store
+.idea/
+.vscode/
+.env
+.env.*
+*login*.md
+*password*
+*credentials*
+*-secrets.*
