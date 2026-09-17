@@ -35,7 +35,7 @@ class Handler(SimpleHTTPRequestHandler):
 
     def translate_path(self, path: str) -> str:
         path = path.split("?", 1)[0].split("#", 1)[0]
-        if PREFIX and path.startswith(PREFIX):
+        if PREFIX and (path == PREFIX or path.startswith(PREFIX + "/")):
             path = path[len(PREFIX):] or "/"
         if path.endswith("/"):
             path += "index.html"
